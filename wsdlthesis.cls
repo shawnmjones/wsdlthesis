@@ -10,10 +10,10 @@
 % The formatting of this class corresponds to
 % "The Old Dominion University Guide for the Preparation of These and Dissertation",
 % https://www.odu.edu/content/dam/odu/offices/graduate-studies/thesis-dissertation/docs/thesis_dissertation_guide.pdf
-% (as per the guide last updated in November 2015).
+% (as per the guide last updated in May 2018).
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{wsdlthesis}[2017/10/16 v0.1 ODU WS-DL Thesis/Dissertation Template]
+\ProvidesClass{wsdlthesis}[2018/07/17 v0.2 ODU WS-DL Thesis/Dissertation Template]
 
 \LoadClass[12pt,fleqn]{report}
 
@@ -291,11 +291,10 @@
                          \typeout{\@chapapp\space\thechapter}%
                          \IfStrEq{\@chapapp}{APPENDIX}{%
                            \addcontentsline{toc}{section}%
-                           {\protect\numberline{\thechapter.}\uppercase{#1}}%
-                           {%
-                             \addcontentsline{toc}{chapter}%
-                           {\protect\numberline{\thechapter.}\uppercase{#1}}%
-                         }}
+                         }{%
+                           \addcontentsline{toc}{chapter}%
+                         }
+                         {\protect\numberline{\thechapter.}\uppercase{#1}}%
                     \else
                       \addcontentsline{toc}{chapter}{\uppercase{#1}}%
                     \fi
